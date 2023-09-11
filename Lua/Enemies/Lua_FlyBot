@@ -1,0 +1,64 @@
+//Used slots
+
+freeslot(
+	"SPR_FLBT",
+	"MT_FLYBOTS1R",
+	"S_FLYBOTS1RSPAWN",
+	"S_FLYBOTS1RFLY",
+	"S_FLYBOTS1RSHOOT"
+)
+
+//Flybot mobjinfo
+
+mobjinfo[MT_FLYBOTS1R] = {
+//$Category SRB1 Badniks
+//$Name Flybot
+//$Sprite FLBTA1
+	doomednum = 1386,
+	spawnstate = S_FLYBOTS1RSPAWN,
+	spawnhealth = 1,
+	seestate = S_FLYBOTS1RFLY,
+	missilestate = S_FLYBOTS1RSHOOT,
+	raisestate = MT_JETTBULLET,
+	attacksound = sfx_s3k4d,
+	reactiontime = 32,
+	deathstate = S_XPLD1,
+	deathsound = sfx_pop,
+	speed = 5,
+	radius = 20*FRACUNIT,
+	height = 40*FRACUNIT,
+	mass = 100,
+	flags = MF_SLIDEME|MF_ENEMY|MF_SPECIAL|MF_SHOOTABLE|MF_NOGRAVITY
+}
+
+//Flybot states
+
+states[S_FLYBOTS1RSPAWN] = {
+	sprite = SPR_FLBT,
+	frame = A|FF_ANIMATE,
+	tics = 4,
+	action = A_Look,
+	nextstate = S_FLYBOTS1RSPAWN,
+	var1 = 2,
+	var2 = 4
+}
+
+states[S_FLYBOTS1RFLY] = {
+	sprite = SPR_FLBT,
+	frame = A|FF_ANIMATE,
+	tics = 1,
+	action = A_JetgThink,
+	var1 = 2,
+	var2 = 4,
+	nextstate = S_FLYBOTS1RFLY
+}
+
+states[S_FLYBOTS1RSHOOT] = {
+	sprite = SPR_FLBT,
+	frame = A|FF_ANIMATE,
+	tics = 1,
+	action = A_JetgShoot,
+	var1 = 2,
+	var2 = 4,
+	nextstate = S_FLYBOTS1RFLY
+}

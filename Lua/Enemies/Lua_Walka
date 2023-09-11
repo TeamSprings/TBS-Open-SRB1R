@@ -1,0 +1,198 @@
+//Used slots
+
+freeslot(
+	"SPR_WBLU",
+	"SPR_WRED",
+	"MT_WALKABLUS1R",
+	"MT_WALKAREDS1R",
+	"S_STANDBLUESRB1R",
+	"S_WALKBLUESRB1R",
+	"S_WALKBLUESRB2R",
+	"S_WALKBLUESRB3R",
+	"S_WALKBLUESRB4R",
+	"S_WALKBLUESRB5R",
+	"S_WALKBLUESRB6R",
+	"S_WALKBLUESRB7R",
+	"S_STANDREDSRB1R",
+	"S_WALKREDSRB1R",
+	"S_WALKREDSRB2R",
+	"S_WALKREDSRB3R",
+	"S_WALKREDSRB4R",
+	"S_WALKREDSRB5R",
+	"S_WALKREDSRB6R",
+	"S_WALKREDSRB7R"
+)
+
+//Walka Blue mobjinfo
+
+mobjinfo[MT_WALKABLUS1R] = {
+//$Category SRB1 Badniks
+//$Name Walka Blu
+//$Sprite WBLUA1
+	doomednum = 1333,
+	spawnstate = S_STANDBLUESRB1R,
+	spawnhealth = 1,
+	seestate = S_WALKBLUESRB1R,
+	reactiontime = 32,
+	deathstate = S_XPLD1,
+	deathsound = sfx_pop,
+	speed = 5,
+	radius = 20*FRACUNIT,
+	height = 40*FRACUNIT,
+	mass = 100,
+	flags = MF_ENEMY|MF_SHOOTABLE|MF_SPECIAL
+}
+
+//Walka Blue states
+
+states[S_STANDBLUESRB1R] = {
+	sprite = SPR_WBLU,
+	frame = A,
+	tics = 5,
+	action = A_Look,
+	nextstate = S_STANDBLUESRB1R
+}
+
+states[S_WALKBLUESRB1R] = {
+	sprite = SPR_WBLU,
+	frame = A,
+	tics = 3,
+	action = A_Chase,
+	nextstate = S_WALKBLUESRB2R
+}
+
+states[S_WALKBLUESRB2R] = {
+	sprite = SPR_WBLU,
+	frame = B,
+	tics = 3,
+	action = A_Chase,
+	nextstate = S_WALKBLUESRB3R
+}
+
+states[S_WALKBLUESRB3R] = {
+	sprite = SPR_WBLU,
+	frame = C,
+	tics = 3,
+	action = A_Chase,
+	nextstate = S_WALKBLUESRB4R
+}
+
+states[S_WALKBLUESRB4R] = {
+	sprite = SPR_WBLU,
+	frame = D,
+	tics = 3,
+	action = A_Chase,
+	nextstate = S_WALKBLUESRB5R
+}
+
+states[S_WALKBLUESRB5R] = {
+	sprite = SPR_WBLU,
+	frame = E,
+	tics = 3,
+	action = A_Chase,
+	nextstate = S_WALKBLUESRB6R
+}
+
+states[S_WALKBLUESRB6R] = {
+	sprite = SPR_WBLU,
+	frame = F,
+	tics = 3,
+	action = A_Chase,
+	nextstate = S_WALKBLUESRB7R
+}
+
+states[S_WALKBLUESRB7R] = {
+	sprite = SPR_WBLU,
+	frame = G,
+	tics = 3,
+	action = A_Chase,
+	nextstate = S_WALKBLUESRB1R
+}
+
+
+//Walka Red mobjinfo
+
+mobjinfo[MT_WALKAREDS1R] = {
+//$Category SRB1 Badniks
+//$Name Walka Red
+//$Sprite WREDA1
+	doomednum = 1334,
+	spawnstate = S_STANDREDSRB1R,
+	spawnhealth = 1,
+	seestate = S_WALKREDSRB1R,
+	reactiontime = 32,
+	deathstate = S_XPLD1,
+	deathsound = sfx_pop,
+	speed = 8,
+	radius = 20*FRACUNIT,
+	height = 40*FRACUNIT,
+	mass = 100,
+	flags = MF_ENEMY|MF_SHOOTABLE|MF_SPECIAL
+}
+
+//Walka Red states
+
+states[S_STANDREDSRB1R] = {
+	sprite = SPR_WRED,
+	frame = A,
+	tics = 5,
+	action = A_Look,
+	nextstate = S_STANDREDSRB1R
+}
+
+states[S_WALKREDSRB1R] = {
+	sprite = SPR_WRED,
+	frame = A,
+	tics = 3,
+	action = A_Chase,
+	nextstate = S_WALKREDSRB2R
+}
+
+states[S_WALKREDSRB2R] = {
+	sprite = SPR_WRED,
+	frame = B,
+	tics = 3,
+	action = A_Chase,
+	nextstate = S_WALKREDSRB3R
+}
+
+states[S_WALKREDSRB3R] = {
+	sprite = SPR_WRED,
+	frame = C,
+	tics = 3,
+	action = A_Chase,
+	nextstate = S_WALKREDSRB4R
+}
+
+states[S_WALKREDSRB4R] = {
+	sprite = SPR_WRED,
+	frame = D,
+	tics = 3,
+	action = A_Chase,
+	nextstate = S_WALKREDSRB5R
+}
+
+states[S_WALKREDSRB5R] = {
+	sprite = SPR_WRED,
+	frame = E,
+	tics = 3,
+	action = A_Chase,
+	nextstate = S_WALKREDSRB6R
+}
+
+states[S_WALKREDSRB6R] = {
+	sprite = SPR_WRED,
+	frame = F,
+	tics = 3,
+	action = A_Chase,
+	nextstate = S_WALKREDSRB7R
+}
+
+states[S_WALKREDSRB7R] = {
+	sprite = SPR_WRED,
+	frame = G,
+	tics = 3,
+	action = A_Chase,
+	nextstate = S_WALKREDSRB1R
+}
+

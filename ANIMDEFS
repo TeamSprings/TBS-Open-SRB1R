@@ -1,0 +1,8 @@
+//Skybox Waterfall
+Texture KHZSC01 Range KHZSC15 Tics 1
+
+//Saws
+Texture MFSAVB01 Range MFSAVB04 Tics 2
+Texture MFSAHB01 Range MFSAHB04 Tics 2
+Texture MFSBVB01 Range MFSBVB04 Tics 2
+Texture MFSBHB01 Range MFSBHB04 Tics 2

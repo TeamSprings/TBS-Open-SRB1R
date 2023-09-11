@@ -1,0 +1,113 @@
+//Used slots
+
+freeslot(
+	"SPR_SXLE",
+	"SPR_EWEP",
+	"MT_SPLASHANIM",
+	"MT_WATERFALLPARTICLEGEN",
+	"MT_WFPARTICLE",
+	"S_SLXESTAND",
+	"S_SLXESTAND1",
+	"S_SLXESTAND2",
+	"S_SLXESTAND3",
+	"S_SLXESTAND4",
+	"S_EWEXSTAND",
+	"S_EWEPSTAND"
+)
+
+//Waterfall splash mobjinfo
+
+mobjinfo[MT_SPLASHANIM] = {
+//$Category SRB1 Effects
+//$Name Water Fall Splash
+//$Sprite SXLEA0
+	doomednum = 1321,
+	spawnstate = S_SLXESTAND,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	deathsound = sfx_pop,
+	radius = 1048576,
+	height = 6291456,
+	mass = 100,
+	flags = MF_NOCLIP|MF_SCENERY|MF_NOGRAVITY
+}
+
+//Waterfall SXLEash states
+
+states[S_SLXESTAND] = {
+	sprite = SPR_SXLE,
+	frame = A,
+	tics = 2,
+	nextstate = S_SLXESTAND1
+}
+
+states[S_SLXESTAND1] = {
+	sprite = SPR_SXLE,
+	frame = B,
+	tics = 2,
+	nextstate = S_SLXESTAND2
+}
+
+states[S_SLXESTAND2] = {
+	sprite = SPR_SXLE,
+	frame = C,
+	tics = 2,
+	nextstate = S_SLXESTAND3
+}
+
+states[S_SLXESTAND3] = {
+	sprite = SPR_SXLE,
+	frame = D,
+	tics = 2,
+	nextstate = S_SLXESTAND4
+}
+
+states[S_SLXESTAND4] = {
+	sprite = SPR_SXLE,
+	frame = E,
+	tics = 2,
+	nextstate = S_SLXESTAND
+}
+
+//Waterfall particles
+
+mobjinfo[MT_WATERFALLPARTICLEGEN] = {
+//$Category SRB1 Effects
+//$Name Water Fall Particle Spawner
+//$Sprite EWEPA0
+	doomednum = 1322,
+	spawnstate = S_EWEXSTAND,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	speed =	8,
+	deathsound = sfx_pop,
+	radius = 1*FRACUNIT,
+	height = 1*FRACUNIT,
+	mass = 16,
+	flags = MF_NOBLOCKMAP|MF_NOSECTOR|MF_NOCLIP|MF_NOGRAVITY|MF_NOCLIPHEIGHT
+}
+
+states[S_EWEXSTAND] = {
+	tics = 1,
+	action = A_ParticleSpawn,
+	var1 = MT_WFPARTICLE,
+	nextstate = S_EWEXSTAND
+}
+
+mobjinfo[MT_WFPARTICLE] = {
+	spawnstate = S_EWEPSTAND,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	deathsound = sfx_pop,
+	speed =	4*FRACUNIT,
+	radius = 4*FRACUNIT,
+	height = 4*FRACUNIT,
+	mass = 4,
+	flags = MF_NOBLOCKMAP|MF_NOGRAVITY|MF_NOCLIPHEIGHT|MF_NOCLIP
+}
+
+states[S_EWEPSTAND] = {
+	frame = A|TR_TRANS50,
+	sprite = SPR_EWEP,
+	tics = 2*TICRATE
+}

@@ -1,0 +1,129 @@
+//Used slots
+
+freeslot(
+	"SPR_RMRI",
+	"SPR_RKCW",
+	"MT_RETRINGS",
+	"MT_WALKARETROS1R",
+	"S_RETRINGS1",
+	"S_RETRINGS2",
+	"S_RETRINGS3",
+	"S_RETRINGS4",
+	"S_DEATHRETRING",
+	"S_WALKRETROSEE",
+	"S_WALKRETRO1",
+	"S_WALKRETRO2",
+	"S_WALKRETRO3"
+)
+// Retro Ring mobjinfo
+
+mobjinfo[MT_RETRINGS] = {
+//$Category SRB1 Retro
+//$Name Retro Rings
+//$Sprite RMRIA0
+	doomednum = 3001,
+	spawnstate = S_RETRINGS1,
+	spawnhealth = 1000,
+	seesound = sfx_itemup,
+	deathstate = S_DEATHRETRING,
+	radius = 16*FRACUNIT,
+	height = 24*FRACUNIT,
+	speed = 38*FRACUNIT,
+	reactiontime = 1,
+	mass = 100,
+	flags = MF_SLIDEME|MF_SPECIAL|MF_NOGRAVITY|MF_NOCLIPHEIGHT
+}
+
+// Retro Ring states
+
+states[S_RETRINGS1] = {
+	sprite = SPR_RMRI,
+	frame = A,
+	tics = 4,
+	nextstate = S_RETRINGS2
+}
+
+states[S_RETRINGS2] = {
+	sprite = SPR_RMRI,
+	frame = B,
+	tics = 4,
+	nextstate = S_RETRINGS3
+}
+
+states[S_RETRINGS3] = {
+	sprite = SPR_RMRI,
+	frame = C,
+	tics = 4,
+	nextstate = S_RETRINGS4
+}
+
+states[S_RETRINGS4] = {
+	sprite = SPR_RMRI,
+	frame = D,
+	tics = 4,
+	nextstate = S_RETRINGS1
+}
+
+states[S_DEATHRETRING] = {
+	sprite = SPR_RMRI,
+	frame = A,
+	tics = 1,
+	action = A_RingBox,
+	nextstate = S_SPRK1
+}
+
+
+
+//Walka Retro mobjinfo
+
+mobjinfo[MT_WALKARETROS1R] = {
+//$Category SRB1 Retro
+//$Name Retro Walka
+//$Sprite RKCWA1
+	doomednum = 3000,
+	spawnstate = S_WALKRETROSEE,
+	spawnhealth = 1,
+	seestate = S_WALKRETRO1,
+	reactiontime = 32,
+	deathstate = S_XPLD1,
+	deathsound = sfx_pop,
+	speed = 8,
+	radius = 20*FRACUNIT,
+	height = 40*FRACUNIT,
+	mass = 100,
+	flags = MF_ENEMY|MF_SHOOTABLE|MF_SPECIAL
+}
+
+//Walka Retro states
+
+states[S_WALKRETROSEE] = {
+	sprite = SPR_RKCW,
+	frame = A,
+	tics = 5,
+	action = A_Look,
+	nextstate = S_WALKRETROSEE
+}
+
+states[S_WALKRETRO1] = {
+	sprite = SPR_RKCW,
+	frame = A,
+	tics = 5,
+	action = A_Chase,
+	nextstate = S_WALKRETRO2
+}
+
+states[S_WALKRETRO2] = {
+	sprite = SPR_RKCW,
+	frame = B,
+	tics = 3,
+	action = A_Chase,
+	nextstate = S_WALKRETRO3
+}
+
+states[S_WALKRETRO3] = {
+	sprite = SPR_RKCW,
+	frame = C,
+	tics = 3,
+	action = A_Chase,
+	nextstate = S_WALKRETRO1
+}

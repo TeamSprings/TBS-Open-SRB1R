@@ -1,0 +1,176 @@
+//freeslot
+
+freeslot(
+	"SPR_GLS1",
+	"SPR_GLS2",
+	"SPR_GLS3",
+	"SPR_GLS4",
+	"MT_GLS1A",
+	"MT_GLS1B",
+	"MT_GLS2A",
+	"MT_GLS2B",
+	"MT_GLS3A",
+	"MT_GLS4A",
+	"S_GLS1A",
+	"S_GLS1B",
+	"S_GLS2A",
+	"S_GLS2B",
+	"S_GLS3A",
+	"S_GLS4A"
+)
+
+// Mobjinfo Sea Weed Small
+
+mobjinfo[MT_GLS1B] = {
+//$Category SRB1 GLS Vegetation
+//$Name Sea Weed Small
+//$Sprite GLS1B0
+	doomednum = 1391,
+	spawnstate = S_GLS1B,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	deathsound = sfx_pop,
+	radius = 1048576,
+	height = 6291456,
+	mass = 100,
+	flags = MF_NOCLIP|MF_SCENERY|MF_NOGRAVITY
+}
+
+// Sea Weed Small states
+
+states[S_GLS1B] = {
+	sprite = SPR_GLS1,
+	frame = B,
+	tics = 5,
+	nextstate = S_GLS1B
+}
+
+// Mobjinfo Sea Weed Large
+
+mobjinfo[MT_GLS1A] = {
+//$Category SRB1 GLS Vegetation
+//$Name Sea Weed Large
+//$Sprite GLS1A0
+	doomednum = 1392,
+	spawnstate = S_GLS1A,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	deathsound = sfx_pop,
+	radius = 1048576,
+	height = 6291456,
+	mass = 100,
+	flags = MF_NOCLIP|MF_SCENERY|MF_NOGRAVITY
+}
+
+// Sea Weed Large states
+
+states[S_GLS1A] = {
+	sprite = SPR_GLS1,
+	frame = A,
+	tics = 5,
+	nextstate = S_GLS1A
+}
+
+// Mobjinfo LilyPad
+
+mobjinfo[MT_GLS2A] = {
+//$Category SRB1 GLS Vegetation
+//$Name LilyPad
+//$Sprite GLS2A0
+	doomednum = 1393,
+	spawnstate = S_GLS2A,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	deathsound = sfx_pop,
+	radius = 1048576,
+	height = 6291456,
+	mass = 100,
+	flags = MF_NOCLIP|MF_SCENERY|MF_NOGRAVITY
+}
+
+// LilyPad states
+
+states[S_GLS2A] = {
+	sprite = SPR_GLS2,
+	frame = A,
+	tics = 5,
+	nextstate = S_GLS2A
+}
+
+// Mobjinfo LilyPad with Flower
+
+mobjinfo[MT_GLS2B] = {
+//$Category SRB1 GLS Vegetation
+//$Name LilyPad with Flower
+//$Sprite GLS2B0
+	doomednum = 1394,
+	spawnstate = S_GLS2A,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	deathsound = sfx_pop,
+	radius = 1048576,
+	height = 6291456,
+	mass = 100,
+	flags = MF_NOCLIP|MF_SCENERY|MF_NOGRAVITY
+}
+
+// LilyPad states
+
+states[S_GLS2B] = {
+	sprite = SPR_GLS2,
+	frame = B,
+	tics = 5,
+	nextstate = S_GLS2B
+}
+
+// Mobjinfo Water Leafs
+
+mobjinfo[MT_GLS3A] = {
+//$Category SRB1 GLS Vegetation
+//$Name Water Leafs
+//$Sprite GLS3A0
+	doomednum = 1395,
+	spawnstate = S_GLS3A,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	deathsound = sfx_pop,
+	radius = 1048576,
+	height = 6291456,
+	mass = 100,
+	flags = MF_NOCLIP|MF_SCENERY|MF_NOGRAVITY
+}
+
+// LilyPad states
+
+states[S_GLS3A] = {
+	sprite = SPR_GLS3,
+	frame = A,
+	tics = 5,
+	nextstate = S_GLS3A
+}
+
+// Mobjinfo Water Leafs
+
+mobjinfo[MT_GLS4A] = {
+//$Category SRB1 GLS Vegetation
+//$Name Underwater Junk
+//$Sprite GLS4A0
+	doomednum = 1396,
+	spawnstate = S_GLS4A,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	deathsound = sfx_pop,
+	radius = 1048576,
+	height = 6291456,
+	mass = 100,
+	flags = MF_NOCLIP|MF_SCENERY|MF_NOGRAVITY
+}
+
+// LilyPad states
+
+states[S_GLS4A] = {
+	sprite = SPR_GLS4,
+	frame = A,
+	tics = 5,
+	nextstate = S_GLS4A
+}

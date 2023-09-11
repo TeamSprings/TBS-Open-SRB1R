@@ -1,0 +1,91 @@
+//freeslot
+
+freeslot(
+	"SPR_ICD1",
+	"SPR_ICD2",
+	"MT_ICD1A",
+	"MT_ICD1B",
+	"MT_ICD2A",
+	"S_ICD1A",
+	"S_ICD1B",
+	"S_ICD2A"
+)
+
+// Mobjinfo Crystal Flower Topaz
+
+mobjinfo[MT_ICD1B] = {
+//$Category SRB1 ICD Vegetation
+//$Name Crystal Flower Topaz
+//$Sprite ICD1B0
+	doomednum = 3200,
+	spawnstate = S_ICD1B,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	deathsound = sfx_pop,
+	radius = 1048576,
+	height = 6291456,
+	mass = 100,
+	flags = MF_NOCLIP|MF_SCENERY|MF_NOGRAVITY
+}
+
+// Crystal Flower Topaz states
+
+states[S_ICD1B] = {
+	sprite = SPR_ICD1,
+	frame = B,
+	tics = 5,
+	nextstate = S_ICD1B
+}
+
+// Mobjinfo Crystal Flower Aquamarine
+
+mobjinfo[MT_ICD1A] = {
+//$Category SRB1 ICD Vegetation
+//$Name Crystal Flower Aquamarine
+//$Sprite ICD1A0
+	doomednum = 3201,
+	spawnstate = S_ICD1A,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	deathsound = sfx_pop,
+	radius = 1048576,
+	height = 6291456,
+	mass = 100,
+	flags = MF_NOCLIP|MF_SCENERY|MF_NOGRAVITY
+}
+
+// Crystal Flower Aquamarine states
+
+states[S_ICD1A] = {
+	sprite = SPR_ICD1,
+	frame = A,
+	tics = 5,
+	nextstate = S_ICD1A
+}
+
+// Mobjinfo Crystal Bush Amethyst
+
+mobjinfo[MT_ICD2A] = {
+//$Category SRB1 ICD Vegetation
+//$Name Crystal Bush Amethyst
+//$Sprite ICD2A0
+	doomednum = 3202,
+	spawnstate = S_ICD2A,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	deathsound = sfx_pop,
+	radius = 1048576,
+	height = 6291456,
+	mass = 100,
+	flags = MF_NOCLIP|MF_SCENERY|MF_NOGRAVITY
+}
+
+// Crystal Bust Amethyst states
+
+states[S_ICD2A] = {
+	sprite = SPR_ICD2,
+	frame = A,
+	tics = 5,
+	nextstate = S_ICD2A
+}
+

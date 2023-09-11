@@ -1,0 +1,216 @@
+MAINCFG
+TitleMap = 80
+TitlePicsMode = Alacroix
+TitleScrollSpeed = 20
+Gamedata = SRB1.dat
+Customversion = Snapshot
+Clear Unlockables
+Clear Emblems
+Clear Levels
+Clear ExtraEmblems
+Clear ConditionSets
+Clear Unlockables
+
+## "Emblems (Medailones)"
+
+# MAP01 Silver
+
+Emblem
+Hint = Lmao no
+Type = Global
+Tag = 0
+MapNum = 1
+Sprite = A
+Color = SKINCOLOR_BLUE
+
+## "Unlockable Specifications and Requirements"
+
+ConditionSet 1
+Condition1 = TotalEmblems 1
+
+Unlockable 1
+Name = Retro Mode
+NoChecklist = true
+NoCecho = true
+Height = 20
+ConditionSet = -1
+
+Unlockable 2
+Name = RM Campaign
+Objective = Get 1000 emblems lmao
+Type = Warp
+Var = A1
+Height = 35
+ConditionSet = 1
+
+Unlockable 3
+Name = RM Level Select
+Objective = Get 1000 emblems lmao
+Type = LevelSelect
+Var = 4
+Height = 50
+ConditionSet = 1
+
+Unlockable 4
+Name = Bonus Levels
+NoChecklist = true
+NoCecho = true
+Height = 80
+ConditionSet = -1
+
+Unlockable 5
+Name = Agate Heights
+Objective = Get 1 emblems lmao
+Type = Warp
+Var = M1
+Height = 95
+ConditionSet = 1
+
+Unlockable 6
+Name = Frozen Fortress
+Objective = Get 1 emblems lmao
+Type = Warp
+Var = M2
+Height = 115
+ConditionSet = 1
+
+
+## ""Level Headers""
+## Titlemap
+Level 80
+Levelname = Titlemap
+SkyNum = 50
+
+## Oak_Falls
+Level 1
+Levelname = Oak Falls
+Act = 1
+Music = MAPA9M
+TypeOfLevel = Singleplayer,Co-op,Competition,Race,2D
+NextLevel = 2
+SkyNum = 21
+RecordAttack = true
+LevelSelect = 1
+MenuFlags = 16
+SkyboxScaleZ = 10.25
+SkyboxScaleX = 3
+SkyboxScaleY = 2
+
+Level 2
+Levelname = Oak Falls
+Act = 2
+Music = MAPA9M
+TypeOfLevel = Singleplayer,Co-op,Competition,Race,2D
+NextLevel = 3
+SkyNum = 22
+RecordAttack = true
+LevelSelect = 1
+MenuFlags = 16
+SkyboxScaleZ = 10.25
+SkyboxScaleX = 3
+SkyboxScaleY = 2
+
+## Mossy_Forest
+Level 3
+Levelname = Mossy Forest
+Act = 1
+Music = MAP01M
+TypeOfLevel = Singleplayer,Co-op,Competition,Race,2D
+NextLevel = M1
+MenuFlags = 16
+SkyNum = 26
+RecordAttack = true
+LevelSelect = 1
+
+Level 4
+Levelname = Mossy Forest
+Act = 2
+Music = MAP01M
+TypeOfLevel = Singleplayer,Co-op,Competition,Race,2D
+NextLevel = M1
+MenuFlags = 16
+SkyNum = 26
+RecordAttack = true
+LevelSelect = 1
+
+## Lake
+Level 5
+Levelname = Lake
+Act = 1
+Music = MAP01M
+TypeOfLevel = Singleplayer,Co-op,Competition,Race,2D
+NextLevel = M1
+MenuFlags = 16
+SkyNum = 26
+RecordAttack = true
+LevelSelect = 1
+
+Level 6
+Levelname = Lake
+Act = 1
+Music = MAP01M
+TypeOfLevel = Singleplayer,Co-op,Competition,Race,2D
+NextLevel = M1
+MenuFlags = 16
+SkyNum = 26
+RecordAttack = true
+LevelSelect = 1
+
+## ""Unlockables""
+## "Bonus Stages"
+## Agate Heights
+Level M1
+Levelname = Agate Heights
+Music = MAPM1M
+TypeOfLevel = Singleplayer,Co-op,Competition,Match
+SelectHeading = Bonus Stages
+MenuFlags = 16
+NextLevel = 2
+SkyNum = 23
+RecordAttack = false
+WideIcon = True
+LevelSelect = 1
+SkyboxScale = 64
+
+Level M2
+Levelname = Frozen Fortress
+Music = MAPM1M
+TypeOfLevel = Singleplayer,Co-op,Competition,Match
+SelectHeading = Bonus Stages
+MenuFlags = 16
+NextLevel = 2
+Weather = PRECIP_SNOW
+SkyNum = 4
+RecordAttack = false
+WideIcon = True
+LevelSelect = 1
+SkyboxScale = 8
+
+
+## "Retro Mode"
+## Knothole Base
+LEVEL A1
+LEVELNAME = KNOTHOLE BASE
+ACT = 1
+NEXTLEVEL = A2
+MUSICSLOT = A9
+WEATHER = 0
+SKYNUM = 1
+SelectHeading = Retro Mode
+MenuFlags = 16
+LEVELSELECT = 4
+TYPEOFLEVEL = Singleplayer,Co-op,Competition,Race,2D
+FORCECHARACTER = earless
+
+LEVEL A2
+LEVELNAME = KNOTHOLE BASE
+ACT = 2
+NEXTLEVEL = A3
+MUSICSLOT = A9
+WEATHER = 0
+SKYNUM = 1
+SelectHeading = Retro Mode
+MenuFlags = 16
+LEVELSELECT = 4
+TYPEOFLEVEL = Singleplayer,Co-op,Competition,Race,2D
+FORCECHARACTER = earless

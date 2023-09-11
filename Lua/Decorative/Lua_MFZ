@@ -1,0 +1,204 @@
+//freeslot
+
+freeslot(
+	"SPR_MFB1",
+	"SPR_MFT2",
+	"SPR_MFF1",
+	"MT_MFB1A",
+	"MT_MFB1B",
+	"MT_MFF1A",
+	"MT_MFF1B",
+	"MT_MFT2A",
+	"MT_MFT2B",
+	"MT_MFT2C",
+	"S_MFB1A",
+	"S_MFB1B",
+	"S_MFT2A",
+	"S_MFT2B",
+	"S_MFT2C",
+	"S_MFF1A",
+	"S_MFF1B"
+)
+
+// Mobjinfo Darker Bush
+
+mobjinfo[MT_MFB1A] = {
+//$Category SRB1 MFZ Vegetation
+//$Name Darker Bush
+//$Sprite MFB1A0
+	doomednum = 1378,
+	spawnstate = S_MFB1A,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	deathsound = sfx_pop,
+	radius = 1048576,
+	height = 6291456,
+	mass = 100,
+	flags = MF_NOCLIP|MF_SCENERY|MF_NOGRAVITY
+}
+
+// Darker Bush states
+
+states[S_MFB1A] = {
+	sprite = SPR_MFB1,
+	frame = A,
+	tics = 5,
+	nextstate = S_MFB1A
+}
+
+// Mobjinfo Darker Bush with Black Berries
+
+mobjinfo[MT_MFB1B] = {
+//$Category SRB1 MFZ Vegetation
+//$Name Darker Bush with Black Berries
+//$Sprite MFB1B0
+	doomednum = 1379,
+	spawnstate = S_MFB1B,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	deathsound = sfx_pop,
+	radius = 1048576,
+	height = 6291456,
+	mass = 100,
+	flags = MF_NOCLIP|MF_SCENERY|MF_NOGRAVITY
+}
+
+// Darker Bush states
+
+states[S_MFB1B] = {
+	sprite = SPR_MFB1,
+	frame = B,
+	tics = 5,
+	nextstate = S_MFB1B
+}
+
+// Mobjinfo Purple Coerulea
+
+mobjinfo[MT_MFF1A] = {
+//$Category SRB1 MFZ Vegetation
+//$Name Coerulea Blurple
+//$Sprite MFF1A0
+	doomednum = 1380,
+	spawnstate = S_MFF1A,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	deathsound = sfx_pop,
+	radius = 1048576,
+	height = 6291456,
+	mass = 100,
+	flags = MF_NOCLIP|MF_SCENERY|MF_NOGRAVITY
+}
+
+// Purple Coerulea states
+
+states[S_MFF1A] = {
+	sprite = SPR_MFF1,
+	frame = A,
+	tics = 5,
+	nextstate = S_MFF1A
+}
+
+// Mobjinfo Pink Coerulea
+
+mobjinfo[MT_MFF1B] = {
+//$Category SRB1 MFZ Vegetation
+//$Name Coerulea Pink
+//$Sprite MFF1B0
+	doomednum = 1381,
+	spawnstate = S_MFF1B,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	deathsound = sfx_pop,
+	radius = 1048576,
+	height = 6291456,
+	mass = 100,
+	flags = MF_NOCLIP|MF_SCENERY|MF_NOGRAVITY
+}
+
+// Pink Coerulea states
+
+states[S_MFF1B] = {
+	sprite = SPR_MFF1,
+	frame = B,
+	tics = 5,
+	nextstate = S_MFF1B
+}
+
+// Mobjinfo Pinetree Small
+
+mobjinfo[MT_MFT2A] = {
+//$Category SRB1 MFZ Vegetation
+//$Name Pinetree Small
+//$Sprite MFT2A0
+	doomednum = 1382,
+	spawnstate = S_MFT2A,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	deathsound = sfx_pop,
+	radius = 1048576,
+	height = 6291456,
+	mass = 100,
+	flags = MF_NOCLIP|MF_SCENERY|MF_NOGRAVITY
+}
+
+// Pinetree Small states
+
+states[S_MFT2A] = {
+	sprite = SPR_MFT2,
+	frame = A,
+	tics = 5,
+	nextstate = S_MFT2A
+}
+
+// Mobjinfo Pinetree Medium
+
+mobjinfo[MT_MFT2B] = {
+//$Category SRB1 MFZ Vegetation
+//$Name Pinetree Medium
+//$Sprite MFT2B0
+	doomednum = 1383,
+	spawnstate = S_MFT2B,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	deathsound = sfx_pop,
+	radius = 1048576,
+	height = 6291456,
+	mass = 100,
+	flags = MF_NOCLIP|MF_SCENERY|MF_NOGRAVITY
+}
+
+// Pinetree Medium states
+
+states[S_MFT2B] = {
+	sprite = SPR_MFT2,
+	frame = B,
+	tics = 5,
+	nextstate = S_MFT2B
+}
+
+
+// Mobjinfo Pinetree with Snow
+
+mobjinfo[MT_MFT2C] = {
+//$Category SRB1 MFZ Vegetation
+//$Name Pinetree with Snow
+//$Sprite MFT2C0
+	doomednum = 1385,
+	spawnstate = S_MFT2C,
+	spawnhealth = 1000,
+	reactiontime = 8,
+	deathsound = sfx_pop,
+	radius = 1048576,
+	height = 6291456,
+	mass = 100,
+	flags = MF_NOCLIP|MF_SCENERY|MF_NOGRAVITY
+}
+
+// Pinetree with Snow states
+
+states[S_MFT2C] = {
+	sprite = SPR_MFT2,
+	frame = C,
+	tics = 5,
+	nextstate = S_MFT2C
+}
