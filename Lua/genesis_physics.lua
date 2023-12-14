@@ -1,5 +1,6 @@
 -- Translation of https://info.sonicretro.org/Sonic_Physics_Guide
 -- God, this sucks.
+-- WHY DID I EVEN STARTED THIS?!?!?!?!?!?!?!?!
 
 //
 //
