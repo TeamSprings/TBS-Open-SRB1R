@@ -78,3 +78,49 @@ hud.add(function(v, p, t, e)
 	spfontdw(v, 'SON1NUM', (hudinfo[HUD_RINGSNUM].x-15)*FRACUNIT, (hudinfo[HUD_SCORENUM].y+2)*FRACUNIT, FRACUNIT, p.rings, hudinfo[HUD_RINGS].f, v.getColormap(TC_DEFAULT, 0), 0, 1, 0)
 	-- Life counter
 end, "game")
+
+local function Draw_Triangle_LineWave_Yoffset(v, y_center, wave_width, wave_radius, x_offset, y_offset, line_radius, color)
+	local width = v.width()
+	local height = v.height()
+	local rest_of_x = -(width-320)/2
+	--local rest_of_y = -(height-200)/2
+	local rest_of_y_central = height-(y_center+wave_radius)
+	local actual_width = wave_width
+
+	for x = rest_of_x, width, 1 do
+		local act = abs(x)+x_offset
+		local y = ((act % wave_radius*4) > (wave_radius*2) and (act % wave_radius*2) - wave_radius or -(act % wave_radius*2) + wave_radius)+FixedInt(y_offset*x)
+		v.drawFill(x, y_center+y, 1, line_radius, color)
+	end
+	
+	--v.drawFill(rest_of_x, y_center+wave_radius, width-rest_of_x, y_offset_central, color)
+end
+
+local function Draw_Triangle_Wave_Yoffset(v, y_center, wave_width, wave_radius, x_offset, y_offset, color)
+	local width = v.width()
+	local height = v.height()
+	local rest_of_x = -(width-320)/2
+	--local rest_of_y = -(height-200)/2
+	local rest_of_y_central = height-(y_center+wave_radius)
+	local actual_width = wave_width
+
+	for x = rest_of_x, width, 1 do
+		local act = abs(x)+x_offset
+		local y = ((act % wave_radius*4) > (wave_radius*2) and (act % wave_radius*2) - wave_radius or -(act % wave_radius*2) + wave_radius)+FixedInt(y_offset*x)
+		local height_new = rest_of_y_central+wave_radius-y
+		v.drawFill(x, y_center+y, 1, height_new, color)
+	end
+	
+	--v.drawFill(rest_of_x, y_center+wave_radius, width-rest_of_x, y_offset_central, color)
+end
+
+
+hud.add(function(v, o, t, endtime)
+	hud.disable("stagetitle")
+	if t < endtime then
+		Draw_Triangle_LineWave_Yoffset(v, 100, 20, 24, (leveltime % 512), FRACUNIT/4-(leveltime % 512)*(FRACUNIT/128), 2, 68)	
+		Draw_Triangle_LineWave_Yoffset(v, 102, 20, 24, (leveltime % 512), FRACUNIT/4-(leveltime % 512)*(FRACUNIT/128), 8, 64)
+		Draw_Triangle_LineWave_Yoffset(v, 110, 20, 24, (leveltime % 512), FRACUNIT/4-(leveltime % 512)*(FRACUNIT/128), 3, 154)
+		Draw_Triangle_Wave_Yoffset(v, 113, 20, 24, (leveltime % 512), FRACUNIT/4-(leveltime % 512)*(FRACUNIT/128), 150)
+	end
+end, "titlecard")
